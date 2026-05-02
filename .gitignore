@@ -1,0 +1,50 @@
+# --- Environment / secrets ---
+.env
+*.env.local
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Model artifacts (large/binary; track via README instead) ---
+model/artifacts/*.onnx
+model/artifacts/*.pkl
+model/artifacts/*.joblib
+!model/artifacts/.gitkeep
+
+# --- Data (raw captured traffic can be large / sensitive PoC content) ---
+data/raw/
+data/processed/
+*.csv
+!docs/**/*.csv
+
+# --- Docker ---
+*.pid
+
+# --- OS / editor cruft ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- Logs ---
+*.log
+logs/
+
+# Project internals
+PROJECT_PLAN.md
+
+# goGreen script and its dependencies
+commitDay1.js
+node_modules/
+package.json
+package-lock.json
